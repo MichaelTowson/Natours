@@ -1,0 +1,19 @@
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //Defines our REM setting.
+    /* Before this was a percent, we made it 10 because it makes the math for REM easy later. 1 REM = 10px, as opposed to 1 REM = 16px. However, we don't want it to stay as pixels because we want users to be able to specify their own font size in the browser.
+    
+    Setting it to 100% would solve this problem, but the default in most browsers is 16px, and our math has been tuned for 10px. Therefore, we divide 10 (what we want) by 16 (what is default) and get 62.5%
+    */
+}
+
+body {
+    box-sizing: border-box;
+}
