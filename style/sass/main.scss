@@ -1,11 +1,6 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
+$color-primary: #55c57a;;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
 
 *,
 *::after,
@@ -36,10 +31,11 @@ body {
 .header {
     position: relative;
     height: 80vh;
-    background-image: linear-gradient(
-        to right bottom,
-        #7ed56fc9, 
-        #1e8b8bcc ), 
+    background-image: 
+        linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
         url(../img/hero.jpg);
     background-size: cover;
     background-position: top;

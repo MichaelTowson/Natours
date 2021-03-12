@@ -8,8 +8,7 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "dart-sass": "^1.25.0",
-    "node-sass": "npm:dart-sass@^1.25.0"
+  "dependencies": {
+    "node-sass": "^5.0.0"
   }
 }
