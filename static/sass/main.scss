@@ -1,11 +1,7 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
+$color-primary: #55c57a;;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
 
 *,
 *::after,
@@ -28,7 +24,7 @@ body {
     font-family: "Lato", sans-serif; /* This was imported on my index.html page. */
     font-weight: 400;
     line-height: 1.7;
-    color: #777;
+    color: $color-grey-dark;
     box-sizing: border-box;
 
 }
@@ -36,10 +32,11 @@ body {
 .header {
     position: relative;
     height: 80vh;
-    background-image: linear-gradient(
-        to right bottom,
-        #7ed56fc9, 
-        #1e8b8bcc ), 
+    background-image: 
+        linear-gradient(
+                to right bottom,
+                rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
         url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
@@ -128,7 +125,7 @@ body {
 
 .btn--white {
     background-color: #fff;
-    color: #777;
+    color: $color-grey-dark;
 }
 
 .btn--white::after {
