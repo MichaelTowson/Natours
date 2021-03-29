@@ -8,9 +8,12 @@
 @import "base/animations";
 @import "base/utilities";
 
+//Views
 @import "pages/home";
 
+//Components
 @import "components/button";
+@import "components/composition";
 
 @import "layout/grid";
 @import "layout/header";
