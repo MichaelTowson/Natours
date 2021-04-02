@@ -46,6 +46,11 @@
             background-color: rgba($color-white, 1);
         }
     }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+    }
     
     &--animated {
         animation: moveInBottom .5s ease-out .35s;
