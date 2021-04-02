@@ -112,6 +112,9 @@ body {
 .u-margin-top-large {
   margin-top: 8rem; }
 
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
@@ -128,8 +131,12 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 1rem 0;
   margin-top: -15vh; }
+
+.section-stories {
+  padding: 15 rem 0;
+  background-color: #f7f7f7; }
 
 .btn:link, .btn:visited {
   display: inline-block;
@@ -276,7 +283,9 @@ body {
     height: 23rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
     .card__picture--2 {
@@ -332,6 +341,53 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    background-color: orangered;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg); }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all .5s; }
+  .story__text {
+    transform: skewX(12deg); }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(50%); }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
 
 .row {
   max-width: 114rem;
