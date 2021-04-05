@@ -16,17 +16,33 @@
         display: block;
     
         &:focus {
-        outline: none;
-        box-shadow: 0 1rem 2rem rgba($color-black, .10);
-        border-bottom: 3px solid $color-primary;
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .10);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid { //Styling for when input is not valid.
+            border-bottom: 3px solid $color-secondary-dark;
         }
 
         &::-webkit-input-placeholder {
-        color: $color-grey-dark-2;
+            color: $color-grey-dark-2;
         }
     }
 
     &__label {
+        font-size: 1.5rem;
+        font-family: inherit;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+    }
 
+    &__input:placeholder-shown + &__label{ //+ is adjacent sibling selector. Must line up with the sequence of the HTML.
+        opacity: 0; //Use opacity in addition to visibility:hidden because we need the animation.
+        visibility: hidden;
+        transform: translateY(-4rem); 
     }
 }
