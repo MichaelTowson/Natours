@@ -1,6 +1,5 @@
 .btn {
-    &:link, 
-    &:visited {
+    &, &:link, &:visited {
         display: inline-block;
         text-transform: uppercase;
         text-decoration: none;
@@ -9,9 +8,13 @@
         transition: all .20s;
         font-size: $default-font-size;
         position: relative;
+
+        //Change for the button element
+        border: none;
+        cursor: pointer;
     }
     
-    &:active {
+    &:active, &:focus {
         transform: translateY(-.1rem);
     }
     
@@ -59,8 +62,7 @@
 }
 
 .btn-text {
-    &:link,
-    &:visited {
+    &:link, &:visited {
         font-size: $default-font-size;
         color: $color-primary;
         display: inline-block;
