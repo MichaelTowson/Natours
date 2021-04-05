@@ -1,14 +1,17 @@
-//_underscores and .scss are not necessary for imports
+//EDUCATIONAL NOTE: _underscores and .scss are not necessary for imports
+
+//Abstracts
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+//Base
 @import "base/base";
 @import "base/typography";
 @import "base/animations";
 @import "base/utilities";
 
-//Page Styling
+//Pages
 @import "pages/index";
 
 //Components
@@ -20,5 +23,7 @@
 @import "components/bg-video";
 @import "components/form";
 
+//layout
 @import "layout/grid";
 @import "layout/header";
+@import "layout/footer"
