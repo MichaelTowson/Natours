@@ -14,6 +14,7 @@
         border-bottom: 3px solid transparent; //Prevents the element from looking re-sized when we add a shadow to it when focused.
         width: 90%;
         display: block;
+        transition: all .3s;
     
         &:focus {
             outline: none;
