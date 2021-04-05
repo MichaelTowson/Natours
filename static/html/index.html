@@ -309,16 +309,28 @@
 
                                 <div class="form__group">
                                     <!-- Radio Button 1 - Small tour group -->
+                                    <!-- For styling purposes, the default radio button is hidden and replaced by a span radio button that overlaps it. -->
                                     <div class="form__radio-group">
                                         <input type="radio" class="form__radio-input" id="small" name="tour-size">
-                                        <label for="small" class="form__radio-label">Small tour group</label>
+                                        <label for="small" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            Small tour group
+                                        </label>
+
                                     </div>
 
                                     <!-- Radio Button 2 - Large tour group -->
                                     <div class="form__radio-group">
                                         <input type="radio" class="form__radio-input" id="large" name="tour-size">
-                                        <label for="large" class="form__radio-label">Large tour group</label>
+                                        <label for="large" class="form__radio-label">
+                                            <span class="form__radio-button"></span>
+                                            Large tour group
+                                        </label>
                                     </div>
+                                </div>
+
+                                <div class="form__group">
+                                    <button class="btn btn--green">Next step &rarr;</button>
                                 </div>
                             </form>
                         </div>
