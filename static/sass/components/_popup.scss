@@ -20,8 +20,8 @@
         overflow: hidden;
         padding: 3.5rem 5rem;
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0.25);
-        transition: all .4s .2s;
+        transform: translate(-50%, -50%) scale(0.5);
+        transition: all .4s .15s;
     }
 
     &__left {
