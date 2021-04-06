@@ -13,6 +13,8 @@
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
     }
 
     &__background {
@@ -83,6 +85,7 @@
         }
     }
 
+    //FUNCTIONALITY
     &__checkbox:checked ~ &__background { //Upon check, resize background
         transform: scale(120);
     }
@@ -90,5 +93,42 @@
     &__checkbox:checked ~ &__nav { //Upon check, resize the nav text and increase opacity to 1
         opacity: 1;
         width: 100%;
+    }
+
+    //ICON - Three lines that can be manipulated. There is one original (a span) and two pseudo elements on top and bottom of it, respectively.
+    //&before = top line... &before = bottom line
+    &__icon {
+        position: relative;
+        margin-top: 50%;
+
+        &, &::before, &::after {
+            width: 3rem;
+            height: 2px; //Using px because this needs to stay constant.
+            background-color: $color-grey-dark-3;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+    }
+    
+    &__button:hover &__icon::before {
+    top: -1rem
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem
     }
 }
