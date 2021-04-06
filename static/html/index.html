@@ -16,9 +16,15 @@
     <body>
     <!-- NAVIGATION TOGGLE -->
         <div class="navigation">
+            
+            <!-- NOTE: Checkbox is used to give it a clickable state. The checkbox itself will be hidden. -->
             <input type="checkbox" class="navigation__checkbox" id="navi-toggle"> 
-                <!-- NOTE: Checkbox is used to give it a clickable state. The checkbox itself will be hidden. -->
-            <label for="navi-toggle" class="navigation__button"></label>
+            
+            <!-- Navigation "X" is formed by putting a single line into a span div, then styling it with pseudo classes and rotations in CSS. -->
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon">&nbsp;</span>
+            </label>
+            
             <div class="navigation__background">&nbsp;</div> 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
