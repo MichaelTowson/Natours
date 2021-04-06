@@ -512,7 +512,9 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 2500; }
+  z-index: 2500;
+  opacity: 0;
+  visibility: hidden; }
   .popup__content {
     position: absolute;
     top: 50%;

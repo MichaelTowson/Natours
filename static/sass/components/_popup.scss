@@ -6,6 +6,8 @@
     left: 0;
     background-color: rgba($color-black, .8);
     z-index: 2500;
+    opacity: 0;
+    visibility: hidden;
 
     &__content {
         @include absCenter;
