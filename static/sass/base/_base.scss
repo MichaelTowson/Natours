@@ -13,20 +13,27 @@ html {
     Setting it to 100% would solve this problem, but the default in most browsers is 16px, and our math has been tuned for 10px. Therefore, we divide 10 (what we want) by 16 (what is default) and get 62.5%
     */
 
-    @include respond(phone) {
-        font-size: 50%; //See above - This defines a REM at this resolution.
+    @include respond(big-desktop) { //Width < 1800?
+        font-size: 75%; //1rem = 12, 12/16 = 75%
     }
-    @include respond(tab-port) {
-        font-size: 60%;
+
+    @include respond(tab-land) { //Width < 900?
+        font-size: 56.25%; //1rem = 9px. 9/16 = 56.25%
     }
-    @include respond(tab-land) {
-        font-size: 70%;
+
+    @include respond(tab-port) { //Width < 600?
+        font-size: 50%; //1rem = 8px. 8/16 (16 is the default px size) = 50%
     }
-    @include respond(big-desktop) {
-        font-size: 80%;
-    }
+
 }
 
 body {
     box-sizing: border-box;
+    padding: 3rem; //Adds a white border to the whole page.
+
+    @include respond(tab-port) {
+        font-size: 50%; 
+        padding: 0; //Removes default white border.
+    }
+
 }

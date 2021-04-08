@@ -20,6 +20,8 @@ $breakpoint argument choices:
 - tab-port: 600-900px;
 - tab-land: 900-1200px;
 - big-desktop: 1800px+;
+
+ORDER: Base + typography > general layout + grid > page layout > components
 */
 
 @mixin respond($breakpoint) {
