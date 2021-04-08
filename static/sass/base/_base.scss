@@ -12,6 +12,19 @@ html {
     
     Setting it to 100% would solve this problem, but the default in most browsers is 16px, and our math has been tuned for 10px. Therefore, we divide 10 (what we want) by 16 (what is default) and get 62.5%
     */
+
+    @include respond(phone) {
+        font-size: 50%; //See above - This defines a REM at this resolution.
+    }
+    @include respond(tab-port) {
+        font-size: 60%;
+    }
+    @include respond(tab-land) {
+        font-size: 70%;
+    }
+    @include respond(big-desktop) {
+        font-size: 80%;
+    }
 }
 
 body {
