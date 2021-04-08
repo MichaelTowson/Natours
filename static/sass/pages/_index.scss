@@ -2,6 +2,7 @@
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -15vh;
+    z-index: 1;
 }
 
 .section-features {
@@ -16,9 +17,14 @@
     
     transform: skewY(-7.5deg);
     margin-top: -15vh;
+    z-index: 0;
     
     & > * {
         transform: skewY(7.5deg);
+    }
+
+    @include respond(tab-port) {
+        margin-top: -5rem;
     }
 }
 

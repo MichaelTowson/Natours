@@ -4,7 +4,16 @@
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+        
+        @include respond(tab-port){
+            margin-bottom: $gutter-vertical-small;
+        }
     }
+    
+    @include respond(tab-port) {
+        max-width: 50rem;
+    }
+
 
     @include clearfix;
 
@@ -13,11 +22,15 @@
         
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+            
+            @include respond(tab-port){
+                margin-right: $gutter-vertical-small;
+                margin-bottom: $gutter-vertical-small;
+            }
         }
 
         @include respond(tab-port){
-            width: 100% !important;
-
+            width: 100% !important; //Converts rows to be single column, filling 100% of the available width.
         }
     } 
 
