@@ -21,6 +21,11 @@
         position: absolute;
         top: 4rem;
         left: 4rem;
+
+        @include respond(phone) {
+            top: 1rem;
+            left: 2rem;
+        }
     }
 
     &__logo{

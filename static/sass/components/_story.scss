@@ -9,29 +9,47 @@
     font-size: $default-font-size;
     transform: skewX(-12deg);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem; 
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+        padding-right: 0;
+    }
+
     &__shape {
         position: relative;
         width: 15rem;
         height: 15rem;
-        background-color: orangered;
         float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
+        backface-visibility: hidden;
         shape-outside: circle(50% at 50% 50%); //Shape outside requires width, height, and float. It shapes the direction of the content around the item.
-
-        -webkit-clip-path: circle(50% at 50% 50%);
+        -webkit-shape-outside: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+            margin-right: 2rem;
+        }
     }
 
     &__img {
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
-        backface-visibility: hidden;
         transition: all .5s;
     }
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__caption {
